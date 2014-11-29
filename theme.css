@@ -1,15 +1,23 @@
 h1{
 
-	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+	font-family: Florence, cursive;
+	line-height: 100px;
 	
+	color: #ECDAAD;
 	background-image: url('http://i.imgur.com/dJxLnJf.png');
 	background-size: 25% 100%;
 	background-repeat: repeat-x;
 	position: center top;
 }
 
+input{
+	
+	float: right;
+}
+
+
 h2{
-	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+	font-family: Helvetica, sans-serif;
 	font-size: 15px;
 	padding-top: 10px;
 	padding-bottom: 30px;
@@ -17,14 +25,20 @@ h2{
 
 body{
 	
-	font-family: Georgia, "Times New Roman", Times, serif;
+	background-color: #D4A07D;	
+	font-family: Florence, cursive;
 	padding-left: 11em;
 	padding-right: 11em;
 }
 
 table, td, th{
 	
-	padding: 20px;
+	padding: 15px;
+}
+
+td.loginform{
+	
+	padding-left: 150px;
 }
 	
 ul.Menu{
