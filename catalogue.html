@@ -5,6 +5,7 @@
 	</head>
 	<body>
 		<h1><center>The Two Chocolateers</center></h1>
+		<input type="hidden" name="username" value="thisistheusername">
 		<div>
 		</div>
 		<div id="left" class="bar">
@@ -35,20 +36,24 @@
 						<table id="cataloguetable" border="0" style="padding-left: 2px;">
 						<tr>
 						<th>Product Name</th>
+						<th>Price</th>
 						<th>Selection</th>
 						<th>Quantity</th>
 						</tr>
-						<form name="input" action="login.c" method="post" style="float: right; margin-left: 50px;">
+						<form name="catalogue" action="Purchase.py" method="post" style="float: right; margin-left: 50px;">
 							<td width="350px">
 							<fieldset id="item1" style="border-color:#FF9999;">
 								<img src="http://www.thebelgian.com/public/uploads/products/tablet100gDark.jpg" width="30%" height="15%" style="float: left; padding-right: 5px;">
 								<b>Dark Chalk-late</b><br>The darkest chocolate you will ever eat. Tastes like chalk!
 							</td>
 							<td style="text-align:center;">
-								<input type="checkbox" name="item" value="name of item1">
+								<p>1$</p>
+							</td>
+							<td style="text-align:center;">
+								<input type="checkbox" name="item1" value="name of item1">
 							</td>
 							<td>
-								<input type="text" size="2" name="item">
+								<input type="text" size="2" name="item1">
 								<br />
 							</td>
 							<tr>
@@ -59,10 +64,13 @@
 								<b>Chocolate Lollipop</b><br>These are always fun. Unless the chocolate is really thick. You could break a tooth on that. This chocolate is not tooth-breaky.
 							</td>
 							<td style="text-align:center;">
-								<input type="checkbox" name="item" value="name of item2">
+								<p>2$</p>
+							</td>
+							<td style="text-align:center;">
+								<input type="checkbox" name="item2" value="name of item2">
 							</td>
 							<td>
-								<input type="text" size="2" name="item">
+								<input type="text" size="2" name="item2">
 								<br />
 							</td>
 							</tr>
@@ -75,16 +83,19 @@
 								<b>Chocolate Cake</b><br>Seriously who does not like chocolate cake. No one. No one does not like chocolate cake.
 							</td>
 							<td style="text-align:center;">
-								<input type="checkbox" name="item" value="name of item3">
+								<p>3$</p>
+							</td>
+							<td style="text-align:center;">
+								<input type="checkbox" name="item3" value="name of item3">
 							</td>
 							<td>
-								<input type="text" size="2" name="item">
+								<input type="text" size="2" name="item3">
 								<br />
 							</td>
 							</tr>
 							</fieldset>
-							<td></td><td></td><td>
-							<input type="submit" name="submit"><br /></td>
+							<td></td><td></td><td></td><td>
+							<input type="submit" name="Purchase"><br /></td>
 						</style>
 						</form>
 					</td>
