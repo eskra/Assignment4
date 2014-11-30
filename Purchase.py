@@ -1,33 +1,51 @@
+#!/usr/bin/env python
+
 import re
+import cgi
+import cgitb
+cgitb.enable()
 
 #open the loggedIn.csv file and search through it to find a user
 
-filename = loggedIn.csv
-inf = open(filname, 'r')
-lines = inf.readlines()
+try:
+	inf = open("loggedIn.csv", "r")
+except IOError:
+	print "oops"
+else:
+	lines = inf.readlines()
 
-for i in range(len(lines)):
-	if not re.search(thisistheusername, lines[i]):
-		#if username not present then
-		print "<html>"
-		print "<head>ERROR</head><br>"
-		print "<body>You are not logged in! Please login or create a user.<br>"
-		print "<a href=\"/~eugoli/catalogue.html\"></a>"
-		print "</body>"
-		print "</html>"
-	else:
-		#display the bill	
-		print "<html>"
-		print "<head>Your Purchase</head><br>"
-		print "<body>"
-		print "You purchased the following items:"
-		print "item1"
-		print "            quantity1                 price1<br>"
-		print "item2"
-		print "            quantity2                 price2<br>"
-		print "item3"
-		print "            quantity3                 price3<br>"
-		print "Total: totalquantity"
-		print "Hello word"
-		print "</body>"
-		print "</html>"
+	for i in range(len(lines)):
+		if not re.search("esther", lines[i]):
+			#if username not present then
+			print "Content-type: text/html\n\n"
+			print """
+			<html>
+			<head>ERROR</head><br>
+			<body>You are not logged in! Please login or create a user.<br>
+			<a href=\"/~eugoli/catalogue.html\">Catalogue</a>
+			</body>
+			</html>
+			"""
+		else:
+			#display the bill		
+
+			print "Content-type: text/html\n\n"
+			print """
+			<html>
+			<head>Your Purchase</head><br>
+			<body>
+			You purchased the following items:<br>
+			"""
+	
+			form = cgi.FieldStorage()
+			basket = form.getvalue('item')
+
+			print "<p>%s %s</p>" %(basket[0], basket[1])
+
+			while basket != None:
+				print "<p>%s %s</p>" %(basket[0], basket[1])
+					
+			print """
+			</body>
+			</html>
+			"""
