@@ -1,8 +1,5 @@
 #!/usr/bin/env python
 
-#TO DO: MAKE IT SO THAT THE INVENTORY DECREASES AS YOU BUY STUFF. 
-#TO DO: MAKE IT SO THAT YOU CANNOT BUY STUFF IF THERE ISN'T ENOUGH IN THE INVENTORY
-#import requests
 import os
 import re
 import cgi
@@ -28,8 +25,16 @@ except IOError:
 else:
 	lines = inf.readlines()
 
-	for i in range(len(lines)):
-		if not re.search("esther", lines[i]):
+	form = cgi.FieldStorage()
+	basket = form.getvalue('username')
+
+	#split string on last occurrence of ","
+	#this is used to find the last logged in user
+	lastuser = lines.rpartition(",")
+
+#	for i in range(len(lines)):
+#		if not re.search(basket[0], lines[i]):
+		if line[2] != basket[0]:
 			#if username not present then
 			print "Content-type: text/html\n\n"
 			print """
@@ -62,7 +67,7 @@ else:
 				</tr>
 				<tr>
 				"""
-				form = cgi.FieldStorage() 
+#				form = cgi.FieldStorage() 
 #				checkedboxes1 = requests.get('item1')
 #				print checkedboxes
 				basket = form.getvalue('item1')
