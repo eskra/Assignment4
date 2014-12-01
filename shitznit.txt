@@ -1,0 +1,107 @@
+d>
+		<link rel="stylesheet" type="text/css" href="theme.css">
+		<title>The Two Chocolateers</title>
+	</head>
+	<body>
+		<h1><center>The Two Chocolateers</center></h1>
+<!		<input type="hidden" name="username" value="thisistheusername">>
+		<div>
+		</div>
+		<div id="left" class="bar">
+			<img src='http://i.imgur.com/Azmopp3.png'></img>
+		</div>
+		<div id="mid">
+			<h2 id="intro">
+				Browse our selection of chocolates from the Chocologue linked in the navigation bar
+				to the left. If you find something you like, login to purchase, or register yourself as a new
+				user. Happy Chocolateering!</h2>
+			
+				<table border="0" style="float: left;">
+					<tr>
+						<th>Navigation</th>
+							<th></th>
+					</tr>
+					<td>
+						<u></u>
+			
+						<ul>
+							<li><a href="/~eugoli/twochocolateers.html">Home</a>
+							<li><a href="/~eugoli/catalogue.html">Chocologue</a>
+							<li><a href="/~eugoli/login.html" target="_blank">Login</a>
+							<li><a href="/~eugoli/register.html">Register</a>
+						</ul>	
+					</td>
+				</table>
+						<table id="cataloguetable" border="0" style="padding-left: 2px;">
+						<tr>
+						<th>Product Name</th>
+						<th>Price</th>
+						<th>Selection</th>
+						<th>Quantity</th>
+						</tr>
+						<form name="catalogue" action="Purchase.py" method="post" style="float: right; margin-left: 50px;">
+							<td width="350px">
+							<fieldset id="item1" style="border-color:#FF9999;">
+								<img src="http://www.thebelgian.com/public/uploads/products/tablet100gDark.jpg" width="30%" height="15%" style="float: left; padding-right: 5px;">
+								<b>Chalklate</b><br>The darkest chocolate you will ever eat. Tastes like chalk!
+							</td>
+							<td style="text-align:center;">
+								<p>1$</p>
+							</td>
+							<td style="text-align:center;">
+								<input type="checkbox" name="item1" value="Chalklate">
+							</td>
+							<td>
+				<input type="text" size="2" name="item1" value="0">
+printf("<br />");
+printf("</td>");
+printf("<tr>");
+printf("</fieldset>");
+printf("<td>");
+printf("<fieldset id=\"item2\" style=\"border-color:#FF9999;\">");
+printf("<img src=\"http://img2.wikia.nocookie.net/__cb20110902145449/chocolate/images/2/2d/Prd-chocolate-lollipops.jpg\" width=\"30%\" height=\"50%\" style=\"float: left; padding-right: 5px;\">");
+printf("<b>Chocopop</b><br>These are always fun. Unless the chocolate is really thick. You could break a tooth on that. This chocolate is not tooth-breaky.");
+printf("</td>");
+printf("<td style=\"text-align:center;\">");
+printf("<p>2$</p>");
+printf("</td>");
+printf("<td style=\"text-align:center;\">");
+printf("<input type=\"checkbox\" name=\"item2\" value=\"Chocopop\">");
+printf("</td>");
+printf("<td>");
+printf("<input type=\"text\" size=\"2\" name=\"item2\" value=\"0\">");
+printf("<br />");
+printf("</td>");
+printf("</tr>");
+printf("<tr>");
+printf("</fieldset>");
+printf("</td>");
+printf("<td>");
+printf("<fieldset id=\"item3\" style=\"border-color:#FF9999;\">");
+printf("<img src=\"http://4.bp.blogspot.com/-Cp2uqOqk6-g/URxORTrrReI/AAAAAAAAFp0/R1iOQd4zD8Y/s640/Chocolate+Cake+2+.jpg\" style=\"float: left; padding-right: 5px;\" width=\"30%\" height=\"20%\">");
+printf("<b>Chococake</b><br>Seriously who does not like chocolate cake. No one. No one does not like chocolate cake.");
+printf("</td>");
+printf("<td style=\"text-align:center;\">");
+printf("<p>3$</p>");
+printf("</td>");
+printf("<td style=\"text-align:center;\">");
+printf("<input type=\"checkbox\" name=\"item3\" value=\"Chococake\">");
+printf("</td>");
+printf("<td>");
+printf("<input type=\"text\" size=\"2\" name=\"item3\" value=\"0\">");
+printf("<br />");
+printf("</td>");
+printf("</tr>");
+printf("</fieldset>");
+printf("<td></td><td></td><td></td><td>");
+printf("<input type=\"submit\" name=\"Purchase\"><br /></td>");
+printf("</style>");
+printf("</form>");
+printf("</td>");
+printf("</table>");
+print("</div>");
+printf("<div id=\"right\" class=\"bar\">");
+printf("<img src=\'http://i.imgur.com/NcNYdGO.png\'></img>");
+print("</div>");
+print("</body>");
+printf("</html>");
