@@ -79,7 +79,7 @@ else:
 					cost1 = mult(purch_item1, 1)
 					new_item1_tempinv = eval('int(numitem1[1]) - int(basket[1])')
 					new_item1_inv = new_item1_tempinv
-					print "<td>%d</td><tr>" %(cost1)
+					print "<td>%d$</td><tr>" %(cost1)
 					sumtot += cost1
 			
 				item1_for_csv = [basket[0], new_item1_inv, 1]
@@ -101,7 +101,7 @@ else:
 					new_item2_tempinv = eval('int(numitem2[1]) - int(basket[1])')
 					new_item2_inv = new_item2_tempinv
 					#PRINT AND UPDATE SUM
-					print "<td>%d</td><tr>" %(cost2)
+					print "<td>%d$</td><tr>" %(cost2)
 					sumtot += cost2
 #			checkedboxes3 = requests.get('item3')
 		
@@ -131,7 +131,7 @@ else:
 					new_item3_tempinv = eval('int(numitem3[1]) - int(basket[1])')
 					new_item3_inv = new_item3_tempinv
 					#PRINT THE COST
-					print "<td>%d</td><tr>" %(cost3)
+					print "<td>%d$</td><tr>" %(cost3)
 					#CHANGE THE SUM
 					sumtot += cost3
 
@@ -158,10 +158,11 @@ else:
 				
 					rewriteinv.close()
 				print "</tr><td></td><td></td><td>"
-				print "%s</td>" %(sumtot)
+				print "%s$</td>" %(sumtot)
 				print "</tr></table>"
 				
 				print """
+				<a href=\"/~eugoli/catalogue.html\">Catalogue</a>
 				</body>
 				</html>
 				"""
